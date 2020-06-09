@@ -86,9 +86,13 @@ $(window).scroll(function(){
     if(wScroll >= $("#work4").offset().top - $(window).height()/2){
         $("#work4").addClass("show");
     }
-
+    
     if(wScroll >= $("#work5").offset().top - $(window).height()/2){
         $("#work5").addClass("show");
+    }
+
+    if(wScroll >= $("#work6").offset().top - $(window).height()/2){
+        $("#work6").addClass("show");
     }
 
     if(wScroll >= $("#contact").offset().top - $(window).height()/2){
@@ -152,104 +156,61 @@ function counter() {
 
 counter();
 
-//work5 modal
-//$(".css1 .btn").click(function(){
-//	$("#modal1").removeClass("one").addClass("one");
-//});
-//
-//$("#modal1 .close").click(function(){
-//	$("#modal1").addClass("out");
-//});
-//
-//$(".css2 .btn").click(function(){
-//	$("#modal2").removeClass("one").addClass("one");
-//});
-//
-//$("#modal2 .close").click(function(){
-//	$("#modal2").addClass("out");
-//});
-//
-//$(".css3 .btn").click(function(){
-//	$("#modal3").removeClass("one").addClass("one");
-//});
-//
-//$("#modal3 .close").click(function(){
-//	$("#modal3").addClass("out");
-//});
-//
-//$(".css4 .btn").click(function(){
-//	$("#modal4").removeClass("one").addClass("one");
-//});
-//
-//$("#modal4 .close").click(function(){
-//	$("#modal4").addClass("out");
-//});
-
-// 스크롤
-//$(window).scroll(function(){
-//    let wScroll = $(window).scrollTop();
-//
-//    $(".scroll").text(wScroll);
-//
-//    let offset = $("#about").offset().top 
-
-//    if(wScroll > offset - 500){
-//        $("#about").addClass("show");
-//
-//        $(".about_left p1").css("transform","translatex("+ wScroll +"px)");
-//    }
-
-//});
-
-// 마우스
-//var cursor = $(".cursor"),
-//		follower = $(".cursor-follower"),
-//		positionX = 0,
-//		positionY = 0,
-//		mouseX = 0, 	//마우스 X축 좌표 값
-//		mouseY = 0;		//마우스 Y축 좌표 값
-//
-//$(document).mousemove(function(e){
-//		mouseX = e.pageX;
-//		mouseY = e.pageY;
-//	
-// 	  positionX += (mouseX - positionX) / 9;
-// 	  positionY += (mouseY - positionY) / 9;
-	
-// 		cursor.css("left", mouseX).css("top", mouseY);
-// 	  follower.css("left", positionX).css("top", positionY);
-//});
+//work6 modal
+$(".css1 .btn1").click(function(){
+    $("#modal1").removeClass("out").addClass("one");
+});
+$("#modal1 .close").click(function(){
+    $("#modal1").addClass("out")
+    setTimeout(de,1000)
+    function de(){
+        $("#modal1").removeClass("one out");
+    }
+});
 
 
-//TweenMax.to({},0.016,{
-//	repeat: -1,
-//	onRepeat: function(){
-//	  positionX += (mouseX - positionX) / 9;
-//	  positionY += (mouseY - positionY) / 9;
-//		
-//		TweenMax.set(cursor,{
-//			css: {
-//				left: mouseX,
-//				top: mouseY
-//			}
-//		});
-//		
-//		TweenMax.set(follower,{
-//			css: {
-//				left: positionX - 11,
-//				top: positionY - 11
-//			}
-//		});
-//	}
-//});
-//
-//
-//$(".hover").on("mouseenter",function(){
-//	cursor.addClass("active");
-//	follower.addClass("active");
-//});
-//
-//$(".hover").on("mouseleave",function(){
-//	cursor.removeClass("active");
-//	follower.removeClass("active");
-//});
+$(".css2 .btn2").click(function(){
+    $("#modal2").removeClass("out").addClass("one");
+});
+$("#modal2 .close").click(function(){
+    $("#modal2").addClass("out")
+    setTimeout(de,1000)
+    function de(){
+        $("#modal2").removeClass("one out");
+    }
+});
+
+$(".css3 .btn3").click(function(){
+    $("#modal3").removeClass("out").addClass("one");
+});
+$("#modal3 .close").click(function(){
+    $("#modal3").addClass("out")
+    setTimeout(de,1000)
+    function de(){
+        $("#modal3").removeClass("one out");
+    }
+});
+
+$(".css4 .btn4").click(function(){
+    $("#modal4").removeClass("out").addClass("one");
+});
+$("#modal4 .close").click(function(){
+    $("#modal4").addClass("out")
+    setTimeout(de,1000)
+    function de(){
+        $("#modal4").removeClass("one out");
+    }
+});
+
+//스크롤
+$(window).scroll(function(){
+    let wScroll = $(window).scrollTop();
+    $(".scroll").text(wScroll);
+
+    let offset = $("#about").offset().top 
+    if(wScroll > offset - 500){
+        $("#about").addClass("show");
+        $(".about_left p1").css("transform","translatex("+ wScroll +"px)");
+    }
+
+});
